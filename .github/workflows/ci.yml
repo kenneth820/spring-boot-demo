@@ -7,5 +7,5 @@ jobs:		#작업들정의
     runs-on: ubuntu-latest    #실행환경:우분투최신버전
 
     steps:		      #작업단계들
-      - uses: actions/checkout@v2   #코드를runner로가져오는GitHub공식action
-      - run: echooo "Hello,DevOps!"   #간단한명령어실행
+      - uses: actions/checkout@v99   #코드를runner로가져오는GitHub공식action
+      - run: echo "Hello,DevOps!"   #간단한명령어실행
