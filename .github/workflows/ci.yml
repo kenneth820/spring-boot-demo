@@ -1,0 +1,11 @@
+name: CI	#워크플로우이름(GitHubUI에표시)
+
+on: [push]	#이벤트:push가발생할때실행
+
+jobs:		#작업들정의
+  build:        #build라는이름의작업
+    runs-on: ubuntu-latest    #실행환경:우분투최신버전
+
+    steps:		      #작업단계들
+      - uses: actions/checkout@v2   #코드를runner로가져오는GitHub공식action
+      - run: echo "Hello,DevOps!"   #간단한명령어실행
