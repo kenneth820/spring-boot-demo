@@ -7,5 +7,12 @@ jobs:		#작업들정의
     runs-on: ubuntu-latest    #실행환경:우분투최신버전
 
     steps:		      #작업단계들
-      - uses: actions/checkout@v2   #코드를runner로가져오는GitHub공식action
-      - run: echo "Hello,DevOps!"   #간단한명령어실행
+      - name: Checkout code
+        uses: actions/checkout@v2   #코드를runner로가져오는GitHub공식action
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2 #JDK 설정(17로 설정)
+        with:
+          java-version: '17'        #현재 프로젝트 Java 버전과 맞추기
+          distribution: 'temurin'   #어떤 배포판(distribution)을 사용할지 명시
+      - name: Say Hello
+        run: echo "Hello,DevOps!"   #간단한명령어실행
