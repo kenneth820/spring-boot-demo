@@ -8,4 +8,4 @@ jobs:		#작업들정의
 
     steps:		      #작업단계들
       - uses: actions/checkout@v2   #코드를runner로가져오는GitHub공식action
-     - run: echo "Hello,DevOps!"   #간단한명령어실행
+      - run: echooo "Hello,DevOps!"   #간단한명령어실행
